@@ -1,0 +1,178 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+
+    <title>Please wait...</title>
+
+     <style>
+        .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px
+        }
+
+        .row {
+            margin-right: -15px;
+            margin-left: -15px
+        }
+
+        .btn-group-vertical > .btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dl-horizontal dd:after, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .nav:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+            clear: both
+        }
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333333;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.5;
+            background-color: #ffffff;
+            vertical-align: middle;
+            align-content: center;
+            text-align: center;
+
+        }
+
+        .container {
+            margin: 5% auto;
+            max-width: 800px;
+            padding: 30px;
+            background: #fff;
+            border: 1px solid #dae6ea;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .verti-align {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background: #f5f5f5;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .charging-step {
+            text-align: center;
+
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        .charging-step img {
+            max-width: 150px;
+        }
+
+        h1 {
+
+            text-align: center;
+            font-size: 4em;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        a{
+            color: #0a7f00;
+            text-decoration: none;
+        }
+
+        a:focus, a:hover {
+            color: #0063bb;
+            text-decoration: none;
+        }
+
+
+
+        .col-text p {
+            margin: 0;
+        }
+
+
+        .col-logo img {
+            max-width: 160px;
+        }
+
+
+        @media (min-width: 768px) {
+            .col-logo {
+                order: 2;
+                width: 30%;
+            }
+
+            .col-text {
+                order: 1;
+                width: 70%;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+   function parseURLParams(url) {
+        var queryStart = url.indexOf("?") + 1,
+            queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+            query = url.slice(queryStart, queryEnd - 1),
+            pairs = query.replace(/\+/g, " ").split("&"),
+            parms = {}, i, n, v, nv;
+
+        if (query === url || query === "") return;
+
+        for (i = 0; i < pairs.length; i++) {
+			try {
+				nv = pairs[i].split("=", 2);
+				n = decodeURIComponent(nv[0]);
+				v = decodeURIComponent(nv[1]);
+	
+				if (!parms.hasOwnProperty(n)) parms[n] = [];
+					parms[n].push(nv.length === 2 ? v : null);
+			}
+			catch(error) {
+			  console.error(error);
+
+			}
+        }
+        return parms;
+    }
+	
+
+</script> 
+
+
+<script>
+
+ 	var db_query_param = location.search.substring(1);
+	
+	var urlString = window.location.href;
+	urlParams = parseURLParams(urlString);
+	
+	window.location.href = "https://"+urlParams.red[0]+"?"+db_query_param;
+
+</script>
+<!-- Global site tag (gtag.js) - Google Ads: 385783047 -->
+
+</body>
+</html>
+
+
+
+
+
